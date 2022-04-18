@@ -23,8 +23,11 @@
       </a>
       <nav class="menu">
         <ul class="menu__list">
+          <!-- в меню нет ссылок -->
           <li class="menu__item">О нас</li>
           <li class="menu__item">Контакты</li>
+          <!-- переключатель лучше писать в одном <li>
+          <li class="menu__item switch"><a href="">Eng</a>/<a href="">Ru</a></li> -->
           <li class="menu__item switch">Eng/</li>
           <li class="menu__item switch">Ru</li>
         </ul>
@@ -44,6 +47,8 @@
       </div>
  
       <div class="about__img">
+        <!-- Описание картинки должно описывать картинку 
+        Добваь еще размеры картинки в атрибуты width и height -->
         <img src="/img/main-img.png" width="" alt="Картинка заставка">
       </div>
     </section>
@@ -52,6 +57,9 @@
       <h2 class="title">Услуги</h2>
       <ul class="services__list">
         <li class="services__item">
+          <!-- Описание картинки просто иконка не подойдет 
+          Для SEO данное многогратное повторение слова 'Иконка' будет относиться к заспамлинастью текста
+          -->
           <img class="services__icon" src="/img/icons/award.svg" width="48" height="48" alt="Иконка">
           <p class="services__text">
             Внедрение SAP SF
@@ -223,6 +231,7 @@
         </p>
         <p class="video__text">
           <a class="phone" href="tel:+79060746861">+7 906 074 6861</a>
+          <!-- Пробел в ссылке надо убрать (mailto: Olga....)-->
           <a class="mail" href="mailto: Olga.Mashko@enisey-cons.com">Olga.Mashko@enisey-cons.com</a>
         </p>
       </div>
@@ -265,6 +274,7 @@
       <h2 class="title">Свяжитесь с нами</h2>
       <div class="container">
         <form action="" class="feedback__form" method="post">
+          <!-- В полях формы сразу раставь атрибут required. Уточни у заказчика обязательные поля -->
           <p class="feedback__form-item">
             <label class="feedback__form-label visually-hidden" for="form-email"></label>
             <input class="feedback__form-email" id="form-email" type="email" name="email" placeholder="Email">
@@ -299,10 +309,9 @@
     <div class="footer__content">
       <h2 class="title">Контакты</h2>
       <a href="tel:+79060746861">+7 906 074 6861</a>
-      <a href="mailto: Olga.Mashko@enisey-cons.com">Olga.Mashko@enisey-cons.com</a>
+      <a href="mailto:Olga.Mashko@enisey-cons.com">Olga.Mashko@enisey-cons.com</a>
     </div>
   </footer>
-  
 </body>
 
 </html>
