@@ -1,7 +1,7 @@
 :root {
   --black: #000000;
   --white: #FFFFFF;
-
+/* Сюда можно добавить персенные с шрифтом, с размерами текста, с отступами между колнками, с минимальной и максимальной шириной контента */
 }
 
 /* Global */
@@ -60,12 +60,17 @@ img {
   outline-offset: -5px;
 }
 
+/* Тут надо подумать как организовать классы, чтбы не было вложенностей селекторо
+Тут лучше создать новый класс элемент page-catalog__title и ему назначить стили. По бему это будет МИКС Блока и Элемента
+*/
+/* .page-catalog__title { */
 .page-catalog .page-title {
   grid-column: 1/-1;
   outline: 5px solid rgba(0, 255, 0, 0.7);
   outline-offset: -5px;
 }
 
+/* .page-catalog__breadcrumbs { */
 .page-catalog .breadcrumbs {
   grid-column: 1 / -1;
   margin-bottom: 40px;
@@ -80,6 +85,7 @@ img {
 
 }
 
+/* .inner-page__header { */
 .inner-page .main-header {
   background-color: var(--black-color);
 }
@@ -89,6 +95,9 @@ img {
 .container {
   width: 940px;
   margin: 0 auto;
+  /* Лучше маржин рассписать, чтобы случайно не сбросить нудные отступы у блоков 
+  margin-left: auto;
+  margin-right: auto; */
   padding: 0 10px;
 
 }
@@ -206,6 +215,11 @@ img {
   background-repeat: repeat;
 }
 
+/* не стоит стилизовать по тегу, если поменяется тег то прийдется залезать в классы и искать связи
+По максимуму разделяем html от css/
+По тегам не стилизуем, только по классам
+*/
+/* .index-columns__header { */
 .index-columns h2 {
   font-size: 30px;
   line-height: 42px;
@@ -218,7 +232,7 @@ img {
 }
 
 /* Gallery */
-
+/* для галлереи можно сразу взять готовую библиотеку, мне нравиться swiper https://swiperjs.com/ */
 .gallery {
 
 }
@@ -254,6 +268,7 @@ img {
   color: inherit;
 }
 
+/* Везде надо убрать стилизацию по тегу, и по возможенности вложенности */
 .appointment-item input {
   font: inherit;
   background-color: transparent;
@@ -317,7 +332,7 @@ img {
   list-style: none;
   line-height: 18px;
 }
-
+/* Вот наверное единственное место где можно оставить вложенность */
 .filter-input-checkbox:hover + label,
 .filter-input-checkbox:focus + label {
   color: var(--special);
