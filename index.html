@@ -4,7 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>Enisey Consulting</title>
+  <!-- Для seo оптимизации хорошо еще подключить мета дескриптион
+  <meta name="description" content="Внедряем и развиваем SAP SuccessFactors."> -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:wght@400;700&family=Pattaya&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- для адаптивной разработки здесь надо будет подключить мета тег
+  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
   <!--<link rel="icon" href="/32.ico">
   <link rel="icon" href="img/Favicon/32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/Favicon/180.png">
@@ -49,6 +54,13 @@
       <div class="about__img">
         <!-- Описание картинки должно описывать картинку 
         Добваь еще размеры картинки в атрибуты width и height -->
+        <!-- Правельнее будет использовать следующую конструкцию и дополнительно использовать webp картинки. https://css-tricks.com/using-webp-images/ -->
+        <!--
+        <picture>
+          <source srcset="/img/main-img.webp" type="image/webp">
+          <img src="/img/main-img.png" width="100" height="100" alt="Картинка заставка">
+        </picture> 
+        -->
         <img src="/img/main-img.png" width="" alt="Картинка заставка">
       </div>
     </section>
