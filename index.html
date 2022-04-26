@@ -44,7 +44,7 @@
               Автоматизируем процессы HR.<br> 
               Экономим ваше время и ресурсы. 
             </p>
-            <a href="#" class="button">Свяжитесь с нами</a>
+            <a href="#" class="button about__button">Свяжитесь с нами</a>
           </div>
      
           <div class="about__img">
@@ -58,33 +58,58 @@
       <h2 class="title services__title">Услуги</h2>
       <ul class="services__list">
         <li class="services__item">
-          <img class="services__icon" src="/img/icons/award.svg" width="48" height="48" alt="Иконка">
+          <svg class="icon services__icon">
+            <use xlink:href="/img/sprite.svg#award"></use>
+          </svg>
           <p class="services__text">
             Внедрение<br>SAP SF
           </p>
+          <p class="services__text--mob">
+            Внедрение SAP SF
+          </p>
         </li>
         <li class="services__item">
-          <img class="services__icon" src="/img/icons/check-circle.svg" width="48" height="48" alt="Иконка">
+          <svg class="icon services__icon">
+            <use xlink:href="/img/sprite.svg#check-circle"></use>
+          </svg>
           <p class="services__text">
             Аудит вашей<br>системы
           </p>
+          <p class="services__text--mob">
+            Аудит вашей системы
+          </p>
         </li>
         <li class="services__item">
-          <img class="services__icon" src="/img/icons/life-buoy.svg" width="48" height="48" alt="Иконка">
+          <svg class="icon services__icon">
+            <use xlink:href="/img/sprite.svg#life-buoy"></use>
+          </svg>
           <p class="services__text">
             Поддержка<br>SAP SF
           </p>
-        </li>
-        <li class="services__item">
-          <img class="services__icon" src="/img/icons/shield.svg" width="48" height="48" alt="Иконка">
-          <p class="services__text">
-            Сопровождение<br>релизов
+          <p class="services__text--mob">
+            Поддержка SAP SF
           </p>
         </li>
         <li class="services__item">
-          <img class="services__icon" src="/img/icons/settings.svg" width="48" height="48" alt="Иконка">
+          <svg class="icon services__icon">
+            <use xlink:href="/img/sprite.svg#settings"></use>
+          </svg>
+          <p class="services__text">
+            Сопровождение<br>релизов
+          </p>
+          <p class="services__text--mob">
+            Сопровождение релизов
+          </p>
+        </li>
+        <li class="services__item">
+          <svg class="icon services__icon">
+            <use xlink:href="/img/sprite.svg#shield"></use>
+          </svg>
           <p class="services__text">
             Доработки<br>и интеграции
+          </p>
+          <p class="services__text--mob">
+            Доработки и интеграции
           </p>
         </li>
       </ul>
@@ -102,102 +127,114 @@
 
     <section class="features page__features">
       <h2 class="title features__title">15 возможностей SAP SF</h2>
-      <div class="arrows features__arrows">
-        <button class="arrows__item" type="button"><span class="visually-hidden">Назад</span></button>
-        <button class="arrows__item" type="button"><span class="visually-hidden">Вперед</span></button>
+      <div class="features__content">
+        <div class="arrows features__arrows">
+          <button class="arrows__item" type="button" aria-label="previous slide">
+            <span class="visually-hidden">Назад</span>
+            <svg class="icon features__icon features__icon--left">
+              <use xlink:href="/img/sprite.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <button class="arrows__item" type="button" aria-label="next slide">
+            <span class="visually-hidden">Вперед</span>
+            <svg class="icon features__icon">
+              <use xlink:href="/img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="slider features__slider">
+          <li class="slider__item">
+            <span class="slider__number">01.</span>
+            <p class="slider__text">
+              Self-services для сотрудников
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">02.</span>
+            <p class="slider__text">
+              Планирование графика отпусков
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">03.</span>
+            <p class="slider__text">
+              Визуализация основной и проектной структуры
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">04.</span>
+            <p class="slider__text">
+              Заказ справок, статусы медосмотров
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">05.</span>
+            <p class="slider__text">
+              Расчетный лист в личном кабинете сотрудника
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">06.</span>
+            <p class="slider__text">
+              Визуализация уровня оплаты на рынке труда
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">07.</span>
+            <p class="slider__text">
+              Расчет премии на основе результатов сотрудников
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">08.</span>
+            <p class="slider__text">
+              Обучение сотрудников и внешних подрядчиков
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">09.</span>
+            <p class="slider__text">
+              Начисление баллов за успешное обучение
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">10.</span>
+            <p class="slider__text">
+              Оценка по целям, компетенциям, 360
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">11.</span>
+            <p class="slider__text">
+              Проведение опросов сотрудников
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">12.</span>
+            <p class="slider__text">
+              Автоматизация подбора и адаптации
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">13.</span>
+            <p class="slider__text">
+              Управление кадровым резервом
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">14.</span>
+            <p class="slider__text">
+              Модель компетенций и карьерные лестницы
+            </p>
+          </li>
+          <li class="slider__item">
+            <span class="slider__number">15.</span>
+            <p class="slider__text">
+              Отчеты и дашборды онлайн
+            </p>
+          </li>
+        </ul>
       </div>
-      <ul class="slider features__slider">
-        <li class="slider__item">
-          <span class="slider__number">01.</span>
-          <p class="slider__text">
-            Self-services для сотрудников
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">02.</span>
-          <p class="slider__text">
-            Планирование графика отпусков
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">03.</span>
-          <p class="slider__text">
-            Визуализация основной и проектной структуры
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">04.</span>
-          <p class="slider__text">
-            Заказ справок, статусы медосмотров
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">05.</span>
-          <p class="slider__text">
-            Расчетный лист в личном кабинете сотрудника
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">06.</span>
-          <p class="slider__text">
-            Визуализация уровня оплаты на рынке труда
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">07.</span>
-          <p class="slider__text">
-            Расчет премии на основе результатов сотрудников
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">08.</span>
-          <p class="slider__text">
-            Обучение сотрудников и внешних подрядчиков
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">09.</span>
-          <p class="slider__text">
-            Начисление баллов за успешное обучение
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">10.</span>
-          <p class="slider__text">
-            Оценка по целям, компетенциям, 360
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">11.</span>
-          <p class="slider__text">
-            Проведение опросов сотрудников
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">12.</span>
-          <p class="slider__text">
-            Автоматизация подбора и адаптации
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">13.</span>
-          <p class="slider__text">
-            Управление кадровым резервом
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">14.</span>
-          <p class="slider__text">
-            Модель компетенций и карьерные лестницы
-          </p>
-        </li>
-        <li class="slider__item">
-          <span class="slider__number">15.</span>
-          <p class="slider__text">
-            Отчеты и дашборды онлайн
-          </p>
-        </li>
-      </ul>
     </section>
 
     <section class="clients page__clients container">
@@ -205,7 +242,7 @@
       <p class="title clients__title">Наши консультанты работают для</p>
       <ul class="clients__list">
         <li class="clients__item"><img src="/img/clients/decathlon.png" alt="Логотип Декатлон"></li>
-        <li class="clients__item"><img src="/img/clients/komos.png" alt="Логотип Komos group"></li>
+        <li class="clients__item clients__item--komos"><img src="/img/clients/komos.png" alt="Логотип Komos group"></li>
         <li class="clients__item"><img src="/img/clients/rusargo.png" alt="Логотип Русагро"></li>
         <li class="clients__item"><img src="/img/clients/ilim.png" alt="Логотип Ilim"></li>
         <li class="clients__item"><img src="/img/clients/nlmk.png" alt="Логотип NLMK"></li>
@@ -219,7 +256,8 @@
       <h2 class="title video__title">Кто мы</h2>
       <div class="video__grid">
         <div class="video__wrap">
-          <video class="video__player" src=""></video>
+          <iframe class="video__player" width="100%" height="433px" src="https://www.youtube.com/embed/fj_3EBG3rOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         
         </div>
         <div class="video__text-wrap">
           <p class="video__text">
@@ -302,7 +340,8 @@
             </p>
             <p class="feedback__form-item feedback__checkbox">
               <input class="feebback__form-checkbox" type="checkbox" id="personal-data" name="personal-data" checked>
-              <label class="feedback__form-personal" for="personal-data"></label>
+              <label class="feedback__form-personal" for="personal-data">Даю согласие на обработку 
+персональных данных</label>
             </p>
             <button class="button feedback__button" type="submit">Отправить</button>
           </div>

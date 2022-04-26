@@ -38,13 +38,13 @@ img {
 }
 
 .container {
-  width: calc(100vw - 0px);
+  width: calc(100vw - 160px);
   margin: 0 auto;
 }
 
 h1, h2, h3 {
   margin: 0;
-  padding: 0;
+  padding: 0; 
 }
 
 .visually-hidden {
@@ -65,6 +65,9 @@ input {
 
 button {
   border-width: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
 
 }
 
@@ -122,6 +125,11 @@ button {
   color: var(--black);
 }
 
+.menu__link:hover {
+  color: var(--black);
+  opacity: 0,5;
+}
+
 /* About */
 
 .about {
@@ -129,8 +137,9 @@ button {
 }
 
 .about__wrapper {
+  box-sizing: border-box;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 566px 1fr;
   height: 600px;
   padding-top: 20px;
 }
@@ -140,8 +149,8 @@ button {
   flex-direction: column;
   align-items: flex-start;
   padding-top: 116px;
-  padding-right: 66px;
-  padding-left: 110px;
+  /* padding-right: 74px; */
+  padding-left: 108px;
 }
 
 .about__title {
@@ -161,6 +170,8 @@ button {
 /* Button */
 
 .button {
+  text-align: center;
+  border-width: 0;
   background-color: var(--dark-blue);
   padding: 18px 40px;
   color: var(--white);
@@ -177,9 +188,6 @@ button {
 
 /* Services */
 
-.services__list {
-  display: flex;
-}
 
 .services__title {
   margin-bottom: 80px;
@@ -192,11 +200,22 @@ button {
 
 .services__item {
   margin-right: 60px;
+  text-align: center;
 }
 
 .services__item:last-child {
   margin-right: 0;
 }
+
+.services__text--mob {
+  display: none;
+}
+
+.icon {
+  height: 48px;
+  width: 48px;
+}
+
 
 .page__services {
   margin-bottom: 120px;
@@ -229,26 +248,45 @@ button {
 
 /* Features */
 
-/* .features {
-  text-align: center;
-} */
-
 .features__title {
   margin-bottom: 40px;
 }
 
+.features__content {
+  display: grid;
+}
+
 .features__arrows {
+  width: 48px;
+  height: 48px;
   margin-bottom: 40px;
+}
+
+.features__icon--left {
+  margin-right: 20px;
+}
+
+
+.features__icon:hover {
+  opacity: 0.5;
 }
 
 .page__features {
   margin-bottom: 120px;
 }
 
+.arrows {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
 /* Slider */
 
 .slider {
   display: flex;
+  overflow: hidden;
 
 }
 
@@ -274,6 +312,12 @@ button {
 
 /* Clients */
 
+.clients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .clients__title {
   margin-bottom: 80px;
 }
@@ -291,6 +335,11 @@ button {
   gap: 80px;
 }
 
+.clients__item--komos {
+  width: 130px;
+  height: auto;
+}
+
 /* Video */
 
 .page__video {
@@ -300,6 +349,7 @@ button {
 .video__grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  gap: 66px;
 
 }
 
@@ -313,6 +363,10 @@ button {
 
 .video__text-wrap {
   width: 80%;
+}
+
+.video__text:last-child {
+  margin-bottom: 0;
 }
 
 .video__text {
@@ -358,7 +412,7 @@ button {
   width: 893px;
   margin: 0 auto;
   padding-top: 12px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, 120px);
@@ -408,10 +462,18 @@ button {
 
 .feedback__checkbox {
   grid-area: checkbox;
+  display: flex;
 }
+
 
 .button {
   grid-area: button;
+}
+
+.feebback__form-checkbox {
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
 }
 
 
@@ -453,10 +515,342 @@ button {
 
 /* Media */
 
-@media (min-width: 1399px)  {
+@media (min-width: 1440px)  {
   .container {
     width: 1280px;
   } 
+}
+
+@media (min-width: 1281px) and (max-width: 1439px) {
 
 }
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .video__text-wrap {
+    width: 100%;
+  }
+
+  .about__info {
+    padding-top: 116px;
+    padding-left: 94px;
+  }
+
+  .video__grid {
+    gap: 48px;
+  
+  }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .title {
+    font-size: 32px;
+  }
+
+  .about__info {
+    padding-top: 82px;
+    padding-left: 74px;
+  }
+
+  .about__wrapper {
+    grid-template-columns: 1.3fr 1fr;
+  }
+
+  .about__text {
+    margin-bottom: 46px;
+  }
+
+  .services__title {
+    margin-bottom: 60px;
+  }
+
+  .page__services {
+    margin-bottom: 100px;
+  }
+  
+  .advantages__text {
+    width: 600px;
+    line-height: 28px;
+    font-size: 20px;
+  }
+
+  .advantages {
+    margin-bottom: 80px;
+  }
+
+  .page__features {
+    margin-bottom: 80px;
+  }
+
+  .clients__title {
+    margin-bottom: 60px;
+  }
+
+  .page__clients {
+    margin-bottom: 60px;
+  }
+
+  .page__reviews {
+    margin-bottom: 80px;
+  }
+  
+  .video__player {
+    height: 290px;
+  }
+
+  .video__grid {
+    gap: 40px;
+  
+  }
+
+  
+  }
+  
+  
+
+@media screen and (max-width: 479px) {
+    .container {
+      width: calc(100vw - 40px);
+    }
+
+    .title {
+      font-size: 24px;
+      line-height: 50px;
+    }
+
+    .logo {
+      width: 148px;
+      height: 18px;
+    }
+
+    .menu__list {
+      display: none;
+    }
+
+    .about__wrapper {
+      grid-template-columns: 1fr;
+    
+    }
+    
+    .about__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 0px;
+      padding-left: 0px;
+    }
+    
+    .about__title {
+      font-size: 24px;
+      line-height: 34px;
+    }
+    
+    .page__about {
+        margin-bottom: 40px;
+    }
+
+    .about__button {
+      width: 100%;
+    }
+
+    .about__img {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      width: 199px;
+      height: 167px;
+      justify-self: center;
+    }
+
+    .about__button {
+      align-self: center;
+    }
+
+    .services__title {
+      margin-bottom: 20px;
+    }
+
+    .services__text--mob {
+      display: block;
+      text-align: left;
+    }
+
+    .services__text {
+      display: none;
+    }
+
+    .services__list {
+      flex-direction: column;
+    }
+
+    .services__item {
+      display: flex;
+      margin-bottom: 20px;
+      margin-right: 0px;
+    }
+
+    .services__item:last-child {
+      margin-bottom: 0;
+    }
+
+    .icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .services__icon {
+      margin-right: 20px;
+    }
+
+
+    .page__services {
+      margin-bottom: 40px;
+    }
+
+    .advantages__title {
+      margin-bottom: 20px;
+    }
+
+    .advantages__text {
+      width: auto;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+
+    .advantages__text:last-child {
+      margin-bottom: 0;
+    }
+
+    .page__advantages {
+      margin-bottom: 40px;
+    }
+
+    .features__title {
+      margin-bottom: 20px;
+    }
+
+    .reviews__title {
+      margin-bottom: 20px;
+    }
+
+    .reviews__item {
+      width: 275px;
+    }
+
+    .reviews {
+      overflow: hidden;
+    }
+
+    .page__reviews {
+      margin-bottom: 40px;
+    }
+
+    .feedback__title {
+      margin-bottom: 20px;
+    }
+
+    .feedback__form-content {
+      width: auto;
+      padding-top: 12px;
+      padding-bottom: 80px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(7, 100px);
+      grid-template-areas: "email"
+                            "phone"
+                            "company"
+                            "name"
+                            "comment"
+                            "checkbox"
+                            "button ";
+    
+    }
+    
+    .feedback__form-item {
+      height: 125px;
+      align-self: end;
+    }
+
+    .page__feedback {
+      margin-bottom: 40px;
+    }
+
+    .feedback__form-content {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .feedback__button {
+      justify-self: center;
+      width: 100%;
+    }
+
+    .clients__title {
+      width: 70%;
+      margin-bottom: 30px;
+      line-height: 28px;
+      
+    }
+
+    .clients__list {
+      padding: 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .page__clients {
+      margin-bottom: 40px;
+    }
+
+    .video__title {
+      margin-bottom: 20px;
+    }
+
+    .video__grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    
+    }
+
+    .video__player {
+      height: 187px;
+    }
+
+    .video__text-wrap {
+      width: auto;
+    }
+
+    .page__video {
+      margin-bottom: 40px;
+    }
+
+    .features__icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    .features__arrows {
+      grid-row: 2/3;
+    }
+
+    .features__slider {
+      margin-bottom: 20px;
+    }
+    
+    .page__features {
+      margin-bottom: 40px;
+    }
+
+    .page__footer {
+      margin-top: 40px;
+    }
+
+    .footer__title {
+      margin-bottom: 20px;
+    }
+    
+  }
+
+  
+  
 
