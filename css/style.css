@@ -3,13 +3,14 @@
   --black: #000000;
   --light-blue: #F7FAFE;
   --dark-blue: #3365DE;
-  --hover-btn: #6389E7; 
+  --hover-btn: #6389E7;
 }
 
 /* Global */
 
 html {
   scroll-behavior: smooth;
+  min-width: 360px;
 }
 
 .page-body  {
@@ -179,7 +180,7 @@ button {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
+  box-sizing: border-box;
 }
 
 .button:hover {
@@ -409,6 +410,7 @@ button {
 /* Feedback */
 
 .feedback__form-content {
+  /* лучше отказаться от фиксированной ширины. Используй относительные еденицы */
   width: 893px;
   margin: 0 auto;
   padding-top: 12px;
@@ -610,6 +612,7 @@ button {
   
   
 
+/* Лучше использовать либо ТОЛЬКО либо min-width или max-width. Если миксовать медио выражения, то в дальнейшем будет путаница и сложно будет поддерживать */
 @media screen and (max-width: 479px) {
     .container {
       width: calc(100vw - 40px);
