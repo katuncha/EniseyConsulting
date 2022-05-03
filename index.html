@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page" lang="en">
 
 <head>
   <meta charset="utf-8">
   <title>Enisey Consulting</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:wght@400;700&family=Pattaya&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <meta name="description" content="Внедряем и развиваем SAP SuccessFactors.">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  <meta name="description" content="Implement and Support SAP SuccessFactors.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="img/icons/icon_32x32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/icons/icon_180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <!--<link rel="icon" href="/32.ico">
   <link rel="icon" href="img/Favicon/32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/Favicon/180.png">
@@ -25,10 +30,12 @@
           </a>
           <nav class="menu">
             <ul class="menu__list">
-              <li class="menu__item"><a class="menu__link" href="#about">О нас</a></li>
-              <li class="menu__item"><a class="menu__link" href="#contact" class="menu__link">Контакты</a></li>
-              <li class="menu__item"><a class="menu__link switch" href="">Eng</a>/<a class="menu__link switch" href="">Ru</a></li>
+              <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
+              <li class="menu__item"><a class="menu__link" href="#contact" class="menu__link">Contacts</a></li>
             </ul>
+            <div class="switch">
+              <a class="switch-item switch-item--en" href="/index.html">Eng</a><span class="switch__dash">/</span><a class="switch-item switch-item--ru" href="/index_ru.html">Ru</a></li>
+            </div>
           </nav>
         </div>
       </div>
@@ -39,12 +46,12 @@
       <div class="container">
         <div class="about__wrapper">
           <div class="about__info">
-            <h1 class="title about__title">Внедряем и развиваем SAP SuccessFactors.</h1>
+            <h1 class="title about__title">Implement and Support SAP SuccessFactors.</h1>
             <p class="about__text">
-              Автоматизируем процессы HR.<br> 
-              Экономим ваше время и ресурсы. 
+              Automate HR processes.<br> 
+              Save your time and resources.
             </p>
-            <a href="#" class="button about__button">Свяжитесь с нами</a>
+            <a href="#" class="button about__button">Contact us</a>
           </div>
      
           <div class="about__img">
@@ -55,17 +62,17 @@
     </section>
 
     <section class="services page__services container">
-      <h2 class="title services__title">Услуги</h2>
+      <h2 class="title services__title">Services</h2>
       <ul class="services__list">
         <li class="services__item">
           <svg class="icon services__icon">
             <use xlink:href="/img/sprite.svg#award"></use>
           </svg>
           <p class="services__text">
-            Внедрение<br>SAP SF
+            SAP SF<br>Implementation
           </p>
           <p class="services__text--mob">
-            Внедрение SAP SF
+            SAP SF Implementation
           </p>
         </li>
         <li class="services__item">
@@ -73,10 +80,10 @@
             <use xlink:href="/img/sprite.svg#check-circle"></use>
           </svg>
           <p class="services__text">
-            Аудит вашей<br>системы
+            Audit of your<br>system
           </p>
           <p class="services__text--mob">
-            Аудит вашей системы
+            Audit of your system
           </p>
         </li>
         <li class="services__item">
@@ -84,10 +91,10 @@
             <use xlink:href="/img/sprite.svg#life-buoy"></use>
           </svg>
           <p class="services__text">
-            Поддержка<br>SAP SF
+            SAP SF<br>Support
           </p>
           <p class="services__text--mob">
-            Поддержка SAP SF
+            SAP SF Support
           </p>
         </li>
         <li class="services__item">
@@ -95,10 +102,10 @@
             <use xlink:href="/img/sprite.svg#settings"></use>
           </svg>
           <p class="services__text">
-            Сопровождение<br>релизов
+            Release<br>maintenance
           </p>
           <p class="services__text--mob">
-            Сопровождение релизов
+            Release maintenance
           </p>
         </li>
         <li class="services__item">
@@ -106,154 +113,158 @@
             <use xlink:href="/img/sprite.svg#shield"></use>
           </svg>
           <p class="services__text">
-            Доработки<br>и интеграции
+            Development<br>and Integrations
           </p>
           <p class="services__text--mob">
-            Доработки и интеграции
+            Development and Integrations
           </p>
         </li>
       </ul>
     </section>
 
     <section class="advantages page__advantages container">
-      <h2 class="title advantages__title">Преимущества</h2>
+      <h2 class="title advantages__title">Advantages</h2>
       <p class="advantages__text">
-        Наша сила – сертифицированная команда со знанием всех модулей SAP SuccessFactors и опытом в HR. Понимаем ваши потребности и предоставляем эффективные решения.
+        Our strength is the team, experts in all SAP SuccessFactors modules and experienced in HR. We understand your needs and provide effective solutions.
       </p>
       <p class="advantages__text">
-        Мы успешно внедряем SAP SuccessFactors и разрабатываем интеграции на SAP Cloud Platform Integration. Соблюдаем сроки и гарантируем качество.
+        We successfully implement SAP SuccessFactors and build integrations on SAP Cloud Platform Integration. We respect the deadlines and guarantee quality.
       </p>
     </section>
 
     <section class="features page__features">
-      <h2 class="title features__title">15 возможностей SAP SF</h2>
-      <div class="features__content">
+      <h2 class="title features__title">15 capabilities of SAP SF</h2>
+      <div class="swiper">
         <div class="arrows features__arrows">
-          <button class="arrows__item" type="button" aria-label="previous slide">
-            <span class="visually-hidden">Назад</span>
+          <button class="arrows__item arrows__item--prev" type="button" aria-label="previous slide">
+            <span class="visually-hidden">Prev</span>
             <svg class="icon features__icon features__icon--left">
               <use xlink:href="/img/sprite.svg#arrow-left"></use>
             </svg>
           </button>
-          <button class="arrows__item" type="button" aria-label="next slide">
-            <span class="visually-hidden">Вперед</span>
+          <button class="arrows__item arrows__item--next" type="button" aria-label="next slide">
+            <span class="visually-hidden">Next</span>
             <svg class="icon features__icon">
               <use xlink:href="/img/sprite.svg#arrow-right"></use>
             </svg>
           </button>
         </div>
-        <ul class="slider features__slider">
-          <li class="slider__item">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
             <span class="slider__number">01.</span>
             <p class="slider__text">
-              Self-services для сотрудников
+              Self-service for employees
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">02.</span>
             <p class="slider__text">
-              Планирование графика отпусков
+              Time off flexible planning
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">03.</span>
             <p class="slider__text">
-              Визуализация основной и проектной структуры
+              Visualization of company structure
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">04.</span>
             <p class="slider__text">
-              Заказ справок, статусы медосмотров
+              Certificates order, track medical check 
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">05.</span>
             <p class="slider__text">
-              Расчетный лист в личном кабинете сотрудника
+              Pay slip access for employee
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">06.</span>
             <p class="slider__text">
-              Визуализация уровня оплаты на рынке труда
+              Visualization of pay and salary markets
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">07.</span>
             <p class="slider__text">
-              Расчет премии на основе результатов сотрудников
+              Bonus calculation based on results
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">08.</span>
             <p class="slider__text">
-              Обучение сотрудников и внешних подрядчиков
+              Trainings for employees and external partners
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">09.</span>
             <p class="slider__text">
-              Начисление баллов за успешное обучение
+              Accrual of points for successful trainings
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">10.</span>
             <p class="slider__text">
-              Оценка по целям, компетенциям, 360
+              Assessment by goals, competencies, 360
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">11.</span>
             <p class="slider__text">
-              Проведение опросов сотрудников
+              Conducting employee surveys
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">12.</span>
             <p class="slider__text">
-              Автоматизация подбора и адаптации
+              Automation of recruiting and onboarding
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">13.</span>
             <p class="slider__text">
-              Управление кадровым резервом
+              Talent pools management
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">14.</span>
             <p class="slider__text">
-              Модель компетенций и карьерные лестницы
+              Career management and competencies growth
             </p>
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="swiper-slide">
             <span class="slider__number">15.</span>
             <p class="slider__text">
-              Отчеты и дашборды онлайн
+              Reports and dashboards online
             </p>
-          </li>
-        </ul>
+          </div>
+        </div>      
       </div>
     </section>
+    
+   
 
     <section class="clients page__clients container">
-      <h2 class="visually-hidden">Наши клиенты</h2>
-      <p class="title clients__title">Наши консультанты работают для</p>
+      <h2 class="visually-hidden">Our clients</h2>
+      <p class="title clients__title">Our consultants work for</p>
       <ul class="clients__list">
-        <li class="clients__item"><img src="/img/clients/decathlon.png" alt="Логотип Декатлон"></li>
-        <li class="clients__item clients__item--komos"><img src="/img/clients/komos.png" alt="Логотип Komos group"></li>
-        <li class="clients__item"><img src="/img/clients/rusargo.png" alt="Логотип Русагро"></li>
-        <li class="clients__item"><img src="/img/clients/ilim.png" alt="Логотип Ilim"></li>
-        <li class="clients__item"><img src="/img/clients/nlmk.png" alt="Логотип NLMK"></li>
-        <li class="clients__item"><img src="/img/clients/samolet.png" alt="Логотип Самолет девелопмент"></li>
-        <li class="clients__item"><img src="/img/clients/eyekraft.png" alt="Логотип Оптика Айкрафт"></li>
-        <li class="clients__item"><img src="/img/clients/smile.png" alt="Логотип Smile at Once"></li>
+        <li class="clients__item"><img src="/img/clients/decathlon.png" alt="logo decathlon"></li>
+        <li class="clients__item clients__item--komos"><img src="/img/clients/komos.png" alt="logo Komos group"></li>
+        <li class="clients__item"><img src="/img/clients/rusargo.png" alt="Logo Rusargo"></li>
+        <li class="clients__item"><img src="/img/clients/ilim.png" alt="Logo Ilim"></li>
+        <li class="clients__item"><img src="/img/clients/nlmk.png" alt="logo NLMK"></li>
+        <li class="clients__item"><img src="/img/clients/samolet.png" alt="Logo fly developmant"></li>
+        <li class="clients__item"><img src="/img/clients/eyekraft.png" alt="Logo Eyecraft"></li>
+        <li class="clients__item"><img src="/img/clients/smile.png" alt="Logo Smile at Once"></li>
       </ul>
     </section>
 
     <section class="video page__video container" id="about">
-      <h2 class="title video__title">Кто мы</h2>
+      <h2 class="title video__title">Who we are</h2>
       <div class="video__grid">
         <div class="video__wrap">
           <iframe class="video__player" width="100%" height="433px" src="https://www.youtube.com/embed/fj_3EBG3rOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -261,10 +272,10 @@
         </div>
         <div class="video__text-wrap">
           <p class="video__text">
-            Команда сертифицированных консультантов SAP SuccessFactors и&nbsp;SAP Cloud Platform Integration. 
+            The team of certified consultants in SAP SuccessFactors and SAP Cloud Platform Integration. We have been implementing and supporting SAP SuccessFactors for more than 5 years for international companies. 
           </p>
           <p class="video__text">
-            Руководитель компании Ольга Машко более 8 лет работала в HR, а&nbsp;последние 6 лет развивает SAP SuccessFactors.
+            The founder and CEO, Olga Mashko has worked in HR for more than 8 years, and for the last 6 years has been developing SAP SuccessFactors.
           </p>
           <p class="video__text">
             <a class="link" href="tel:+79060746861">+7 906 074 6861</a><br>
@@ -276,74 +287,76 @@
     </section>
 
     <section  class="reviews page__reviews container">
-      <h2 class="title reviews__title">Отзывы</h2>
+      <h2 class="title reviews__title">Reviews</h2>
       <ul class="reviews__list">
         <li class="reviews__item">
           <div class="reviews__header">
-            <span class="reviews__name">Екатерина Туркевич</span><br>
-            <span class="reviews__position">HR директор Декатлон</span>
+            <span class="reviews__name">Ekaterina Turkevich</span><br>
+            <span class="reviews__position">HR director Decathlon</span>
           </div>
-          <p class="reviews__text">Главное преимущество работы с&nbsp;Енисей Консалтинг - 
-            истинная ориентация на&nbsp;потребности клиента, за 2 года сотрудничества
-            мы внедрили 4 модуля SAP SuccessFactors из 8,
-            внедренных ранее. Также хочу выразить благодарность
-            за оперативное решение запросов и&nbsp;зачастую работу в крайне сжатые сроки!</p>
+          <p class="reviews__text">The main advantage of working with Enisey Consulting
+             is a focus on the client needs. For 2 years of cooperation we have
+              implemented 4 modules SAP Success Factors from 8 implemented before.
+              I want to express my gratitude for the prompt issue solving,
+              because often the work in an extremely short time.</p>
         </li>
         <li class="reviews__item">
           <div class="reviews__header">
-            <span class="reviews__name">Анна Стадник</span><br>
-            <span class="reviews__position">Руководитель проектов HR Русагро</span>
+            <span class="reviews__name">Anna Stadnik</span><br>
+            <span class="reviews__position">HR Project Manager Rusagro Group</span>
           </div>
-          <p class="reviews__text">Редкость найти партнера, который не только качественно и&nbsp;быстро
-            выполняет свою работу, но и&nbsp;готов давать предложения по&nbsp;развитию, предлагать лучшие
-            практики, рекомендовать наилучший путь реализации того или иного запроса.
-            В лице команды Енисей Консалтинг мы нашли действительно Партнера и&nbsp;можем с уверенностью
-            двигаться по пути внедрения и&nbsp;развития системы SAP SuccessFactors.</p>
+          <p class="reviews__text">It is rare to find a&nbsp;partner who not only performs his&nbsp;work 
+            efficiently and quickly, but also proposes the&nbsp;best practices,
+            recommends the best way to&nbsp;implement a particular request.
+             With Enisey Consulting team we really found a Partner,
+             the full sense of&nbsp;the word. We are very pleased with our&nbsp;cooperation
+            and&nbsp;can move forward with confidence, sense of&nbsp;a&nbsp;protected rear,
+            along the path of&nbsp;implementing and developing SAP Success Factors.</p>
         </li>
         <li class="reviews__item">
           <div class="reviews__header">
-            <span class="reviews__name">Светлана Доева</span><br>
-            <span class="reviews__position">Директор по персоналу Айкрафт</span>
+            <span class="reviews__name">Svetlana Doeva</span><br>
+            <span class="reviews__position">HR Director Eyecraft</span>
           </div>
-          <p class="reviews__text">Консультанты Енисей Консалтинг – профессионалы
-            высокого уровня, обладающие необходимым для успешного внедрения
-            и&nbsp;сопровождения SAP SuccessFactors опытом в сфере HR и IT!
-            Благодарим их за ответственное отношение к проекту в целом и&nbsp;творческий
-            подход к решению нестандартных задач в частности.</p>
+          <p class="reviews__text">Enisey Consulting consultants are high-level professionals
+            with&nbsp;the experience in HR and IT, which is must have for&nbsp;the successful
+            implementation / maintenance of SAP Success Factors! We thank them for&nbsp;their
+            responsible attitude to the project in general and creative approach to solving
+            non-standard tasks in particular.</p>
         </li>
       </ul>
     </section>
 
     <section class="feedback page__feedback">
-      <h2 class="title feedback__title">Свяжитесь с нами</h2>
+      <h2 class="title feedback__title">Contact us</h2>
         <form class="feedback__form" action="" method="post">
           <div class="feedback__form-content">
             <p class="feedback__form-item feedback__email">
-              <label class="feedback__form-label visually-hidden" for="form-email"></label>
               <input class="feedback__form-input" id="form-email" type="email" name="email" placeholder="Email">
+              <label class="feedback__form-label" for="form-email">Email</label>
             </p>
             <p class="feedback__form-item feedback__phone">
-              <label class="feedback__form-label visually-hidden" for="form-phone"></label>
-              <input class="feedback__form-input" id="form-phone" type="tel" name="phone" placeholder="Телефон">
+              <input class="feedback__form-input" id="form-phone" type="tel" name="phone" placeholder="Phone number">
+              <label class="feedback__form-label" for="form-phone">Phone number</label>
             </p>
             <p class="feedback__form-item feedback__name">
-              <label class="feedback__form-label visually-hidden" for="form-name"></label>
-              <input class="feedback__form-input" id="form-name" type="text" name="name" placeholder="Ваше имя">
+              <input class="feedback__form-input" id="form-name" type="text" name="name" placeholder="Your name">
+              <label class="feedback__form-label" for="form-name">Your name</label>
             </p>
             <p class="feedback__form-item feedback__company">
-              <label class="feedback__form-label visually-hidden" for="form-company"></label>
-              <input class="feedback__form-input" id="form-company" type="text" name="company" placeholder="Название компании">
+              <input class="feedback__form-input" id="form-company" type="text" name="company" placeholder="Company">
+              <label class="feedback__form-label" for="form-company">Company</label>
             </p>
             <p class="feedback__form-item feedback__comment">
-              <label class="feedback__form-label visually-hidden" for="form-comment"></label>
-              <input class="feedback__form-input" id="form-comment" type="text" name="comment" placeholder="Комментарий">
+              <input class="feedback__form-input" id="form-comment" type="text" name="comment" placeholder="Comment">
+              <label class="feedback__form-label visually-hidden" for="form-comment">Comment</label>
             </p>
             <p class="feedback__form-item feedback__checkbox">
               <input class="feebback__form-checkbox" type="checkbox" id="personal-data" name="personal-data" checked>
-              <label class="feedback__form-personal" for="personal-data">Даю согласие на обработку 
+              <label class="feedback__form-personal" for="personal-data">I agree to the personal data processing 
 персональных данных</label>
             </p>
-            <button class="button feedback__button" type="submit">Отправить</button>
+            <button class="button feedback__button" type="submit">Send</button>
           </div>
         </form>
     </section>
@@ -351,12 +364,14 @@
 
   <footer class="footer page__footer container" id="contact">
     <div class="footer__content">
-      <h2 class="title footer__title">Контакты</h2>
+      <h2 class="title footer__title">Contacts</h2>
       <a class="link" href="tel:+79060746861">+7 906 074 6861</a><br>
       <a class="link" href="mailto:Olga.Mashko@enisey-cons.com">Olga.Mashko@enisey-cons.com</a>
     </div>
+   
   </footer>
-
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>

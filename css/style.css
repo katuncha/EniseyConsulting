@@ -33,8 +33,11 @@ ul  {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
+  object-fit: contain;
+  object-position: center; 
 }
 
 .container {
@@ -97,13 +100,19 @@ button {
 .header__content {
   display: flex;
   justify-content: space-between;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  /* padding-top: 32px;
+  padding-bottom: 32px; */
   align-items: center;
 }
 
 
 /* Menu */
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  padding: 32px 0;
+}
 
 .menu__list {
   display: flex;
@@ -117,18 +126,34 @@ button {
   color: var(--black);
 }
 
-.menu__item:last-child {
-  margin-right: 0;
-}
-
 .menu__link {
   color: var(--black);
 }
 
 .menu__link:hover {
-  color: var(--black);
-  opacity: 0,5;
+  opacity: 0.5;
 }
+
+.switch {
+  display: flex;  
+  align-items: center;
+}
+
+.switch-item {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.switch-item:hover {
+  opacity: 0.5;
+}
+
+.switch__dash {
+  line-height: 0;
+}
+
 
 /* About */
 
@@ -137,20 +162,19 @@ button {
 }
 
 .about__wrapper {
-  box-sizing: border-box;
   display: grid;
-  grid-template-columns: 566px 1fr;
-  height: 600px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .about__info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 116px;
-  /* padding-right: 74px; */
   padding-left: 108px;
+  padding-right: 20px;
 }
 
 .about__title {
@@ -170,6 +194,7 @@ button {
 /* Button */
 
 .button {
+  box-sizing: border-box;
   text-align: center;
   border-width: 0;
   background-color: var(--dark-blue);
@@ -196,11 +221,13 @@ button {
 .services__list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .services__item {
   margin-right: 60px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .services__item:last-child {
@@ -218,7 +245,7 @@ button {
 
 
 .page__services {
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 /* Advantages */
@@ -236,7 +263,7 @@ button {
 }
 
 .advantages__text {
-  width: 820px;
+  width: 60%;
   line-height: 40px;
   margin-bottom: 40px;
   align-self: center;
@@ -252,13 +279,7 @@ button {
   margin-bottom: 40px;
 }
 
-.features__content {
-  display: grid;
-}
-
 .features__arrows {
-  width: 48px;
-  height: 48px;
   margin-bottom: 40px;
 }
 
@@ -277,21 +298,18 @@ button {
 
 .arrows {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  
+  margin-left: calc(50vw - 58px);
 }
 
 /* Slider */
 
-.slider {
-  display: flex;
-  overflow: hidden;
-
+.swiper {
+  display: grid;
 }
 
-.slider__item {
-  width: 325px;
+
+.swiper-slide {
+  box-sizing: border-box;
   background-color: var(--light-blue);
   border-radius: 20px;
   padding: 40px;
@@ -301,6 +319,7 @@ button {
   min-width: 325px;
   max-width: 325px;
   margin-right: 20px;
+ 
 }
 
 .slider__number {
@@ -308,6 +327,10 @@ button {
   color: var(--dark-blue);
   font-size: 28px;
   
+}
+
+.slider__text {
+  /* width: 245px; */
 }
 
 /* Clients */
@@ -409,7 +432,7 @@ button {
 /* Feedback */
 
 .feedback__form-content {
-  width: 893px;
+  width: 66%;
   margin: 0 auto;
   padding-top: 12px;
   padding-bottom: 40px;
@@ -419,17 +442,21 @@ button {
   grid-template-areas: "email phone"
                         "name  company"
                         "comment  comment"
-                        "checkbox ."
+                        "checkbox checkbox"
                         "button .";
                         
-  column-gap: 100px;
+  column-gap: 10%;
   align-items: end;
 
 }
 
+/* input::placeholder {
+  transform: translateY(12px);
+} */
+
 .feedback__form-item {
-  height: 125px;
-  align-self: end;
+  /* align-self: end; */
+  position: relative;
 }
 
 .feedback__form {
@@ -438,6 +465,25 @@ button {
 
 .feedback__title {
   margin-bottom: 60px;
+}
+
+.feedback__form-label {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  transition: all ease 0.6s;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.feedback__form-input:placeholder-shown + .feedback__form-label {
+  opacity: 0;
+  transform: translateY(0px);
+}
+
+.feedback__form-personal {
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .feedback__email {
@@ -463,6 +509,7 @@ button {
 .feedback__checkbox {
   grid-area: checkbox;
   display: flex;
+  align-items: center;
 }
 
 
@@ -481,9 +528,12 @@ button {
   border-bottom-width: 1px;
   border-color: var(--black);
   width: 100%;
-  height: 50px;
-  background-color: var(--dark-blue);
+  background-color: var(--light-blue);
+  font-size: 16px;
+  line-height: 24px;
+  outline: none;
 }
+
 
 .feedback__form-input::placeholder {
   color: var(--black);
@@ -531,7 +581,6 @@ button {
   }
 
   .about__info {
-    padding-top: 116px;
     padding-left: 94px;
   }
 
@@ -550,8 +599,9 @@ button {
   }
 
   .about__info {
-    padding-top: 82px;
     padding-left: 74px;
+  
+
   }
 
   .about__wrapper {
@@ -571,7 +621,7 @@ button {
   }
   
   .advantages__text {
-    width: 600px;
+    width: auto;
     line-height: 28px;
     font-size: 20px;
   }
@@ -607,10 +657,8 @@ button {
 
   
   }
-  
-  
 
-@media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) and (min-width: 478px) {
     .container {
       width: calc(100vw - 40px);
     }
@@ -623,14 +671,17 @@ button {
     .logo {
       width: 148px;
       height: 18px;
+      line-height: 0
     }
 
     .menu__list {
       display: none;
     }
-
+    
     .about__wrapper {
       grid-template-columns: 1fr;
+      padding-top: 5px;
+      padding-bottom: 20px;
     
     }
     
@@ -640,6 +691,7 @@ button {
       align-items: flex-start;
       padding-top: 0px;
       padding-left: 0px;
+      padding-right: 0;
     }
     
     .about__title {
@@ -661,6 +713,74 @@ button {
       width: 199px;
       height: 167px;
       justify-self: center;
+      margin-bottom: 20px;
+    }
+
+    .about__button {
+      align-self: center;
+    }
+
+
+  }
+  
+  
+
+@media screen and (max-width: 479px) {
+    .container {
+      width: calc(100vw - 40px);
+    }
+
+    .title {
+      font-size: 24px;
+      line-height: 50px;
+    }
+
+    .logo {
+      width: 148px;
+      height: 18px;
+      line-height: 0
+    }
+
+    .menu__list {
+      display: none;
+    }
+
+    .about__wrapper {
+      grid-template-columns: 1fr;
+      padding-top: 5px;
+      padding-bottom: 20px;
+    
+    }
+    
+    .about__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    
+    .about__title {
+      font-size: 24px;
+      line-height: 34px;
+    }
+    
+    .page__about {
+        margin-bottom: 40px;
+    }
+
+    .about__button {
+      width: 100%;
+    }
+
+    .about__img {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      width: 199px;
+      height: 167px;
+      justify-self: center;
+      margin-bottom: 20px;
     }
 
     .about__button {
@@ -752,7 +872,7 @@ button {
 
     .feedback__form-content {
       width: auto;
-      padding-top: 12px;
+      padding-top: 100px;
       padding-bottom: 80px;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(7, 100px);
@@ -780,9 +900,21 @@ button {
       margin-right: 20px;
     }
 
+    .feedback__form-label {
+      top: -20px;
+    }
+
+    .feebback__form-checkbox {
+      margin-top: 3px;
+    }
+
     .feedback__button {
       justify-self: center;
       width: 100%;
+    }
+
+    .feedback__checkbox {
+      align-items: flex-start;
     }
 
     .clients__title {
@@ -827,10 +959,14 @@ button {
     .features__icon {
       width: 48px;
       height: 48px;
+      line-height: 0;
     }
 
     .features__arrows {
       grid-row: 2/3;
+      margin-bottom: 0;
+      margin-top: 20px;
+      
     }
 
     .features__slider {
