@@ -301,6 +301,10 @@ button {
   margin-left: calc(50vw - 58px);
 }
 
+.arrows__item {
+  cursor: pointer;
+}
+
 /* Slider */
 
 .swiper {
@@ -319,14 +323,27 @@ button {
   min-width: 325px;
   max-width: 325px;
   margin-right: 20px;
- 
+
 }
+
+.swiper-slide:first-child {
+  margin-left: calc(50vw - 640px);
+}
+  
+.swiper-slide:last-child {
+  margin-right: calc(50vw - 640px);
+}
+  
 
 .slider__number {
   margin-bottom: 20px;
   color: var(--dark-blue);
   font-size: 28px;
   
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
 }
 
 .slider__text {
@@ -983,6 +1000,10 @@ button {
 
     .footer__title {
       margin-bottom: 20px;
+    }
+
+    .swiper-slide {
+      padding-left: 20px;
     }
     
   }

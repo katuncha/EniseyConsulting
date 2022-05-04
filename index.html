@@ -12,10 +12,6 @@
   <link rel="icon" href="img/icons/icon_32x32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/img/icons/icon_180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <!--<link rel="icon" href="/32.ico">
-  <link rel="icon" href="img/Favicon/32.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="img/Favicon/180.png">
-  <link rel="manifest" href="manifest.webmanifest">-->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -151,6 +147,7 @@
         </div>
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
+          <div class="swiper-gradient"></div>
           <!-- Slides -->
           <div class="swiper-slide">
             <span class="slider__number">01.</span>
@@ -245,9 +242,7 @@
         </div>      
       </div>
     </section>
-    
-   
-
+  
     <section class="clients page__clients container">
       <h2 class="visually-hidden">Our clients</h2>
       <p class="title clients__title">Our consultants work for</p>
@@ -288,75 +283,77 @@
 
     <section  class="reviews page__reviews container">
       <h2 class="title reviews__title">Reviews</h2>
-      <ul class="reviews__list">
-        <li class="reviews__item">
-          <div class="reviews__header">
-            <span class="reviews__name">Ekaterina Turkevich</span><br>
-            <span class="reviews__position">HR director Decathlon</span>
-          </div>
-          <p class="reviews__text">The main advantage of working with Enisey Consulting
-             is a focus on the client needs. For 2 years of cooperation we have
-              implemented 4 modules SAP Success Factors from 8 implemented before.
-              I want to express my gratitude for the prompt issue solving,
-              because often the work in an extremely short time.</p>
-        </li>
-        <li class="reviews__item">
-          <div class="reviews__header">
-            <span class="reviews__name">Anna Stadnik</span><br>
-            <span class="reviews__position">HR Project Manager Rusagro Group</span>
-          </div>
-          <p class="reviews__text">It is rare to find a&nbsp;partner who not only performs his&nbsp;work 
-            efficiently and quickly, but also proposes the&nbsp;best practices,
-            recommends the best way to&nbsp;implement a particular request.
-             With Enisey Consulting team we really found a Partner,
-             the full sense of&nbsp;the word. We are very pleased with our&nbsp;cooperation
-            and&nbsp;can move forward with confidence, sense of&nbsp;a&nbsp;protected rear,
-            along the path of&nbsp;implementing and developing SAP Success Factors.</p>
-        </li>
-        <li class="reviews__item">
-          <div class="reviews__header">
-            <span class="reviews__name">Svetlana Doeva</span><br>
-            <span class="reviews__position">HR Director Eyecraft</span>
-          </div>
-          <p class="reviews__text">Enisey Consulting consultants are high-level professionals
-            with&nbsp;the experience in HR and IT, which is must have for&nbsp;the successful
-            implementation / maintenance of SAP Success Factors! We thank them for&nbsp;their
-            responsible attitude to the project in general and creative approach to solving
-            non-standard tasks in particular.</p>
-        </li>
-      </ul>
+      <div class="review__swiper">
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <div class="reviews__header">
+              <span class="reviews__name">Ekaterina Turkevich</span><br>
+              <span class="reviews__position">HR director Decathlon</span>
+            </div>
+            <p class="reviews__text">The main advantage of working with Enisey Consulting
+               is a focus on the client needs. For 2 years of cooperation we have
+                implemented 4 modules SAP Success Factors from 8 implemented before.
+                I want to express my gratitude for the prompt issue solving,
+                because often the work in an extremely short time.</p>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__header">
+              <span class="reviews__name">Anna Stadnik</span><br>
+              <span class="reviews__position">HR Project Manager Rusagro Group</span>
+            </div>
+            <p class="reviews__text">It is rare to find a&nbsp;partner who not only performs his&nbsp;work 
+              efficiently and quickly, but also proposes the&nbsp;best practices,
+              recommends the best way to&nbsp;implement a particular request.
+               With Enisey Consulting team we really found a Partner,
+               the full sense of&nbsp;the word. We are very pleased with our&nbsp;cooperation
+              and&nbsp;can move forward with confidence, sense of&nbsp;a&nbsp;protected rear,
+              along the path of&nbsp;implementing and developing SAP Success Factors.</p>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__header">
+              <span class="reviews__name">Svetlana Doeva</span><br>
+              <span class="reviews__position">HR Director Eyecraft</span>
+            </div>
+            <p class="reviews__text">Enisey Consulting consultants are high-level professionals
+              with&nbsp;the experience in HR and IT, which is must have for&nbsp;the successful
+              implementation / maintenance of SAP Success Factors! We thank them for&nbsp;their
+              responsible attitude to the project in general and creative approach to solving
+              non-standard tasks in particular.</p>
+          </li>
+        </ul>
+      </div>
+      
     </section>
 
     <section class="feedback page__feedback">
       <h2 class="title feedback__title">Contact us</h2>
-        <form class="feedback__form" action="" method="post">
+        <form class="feedback__form" action="" method="post" action="/post.php">
           <div class="feedback__form-content">
             <p class="feedback__form-item feedback__email">
-              <input class="feedback__form-input" id="form-email" type="email" name="email" placeholder="Email">
-              <label class="feedback__form-label" for="form-email">Email</label>
+              <input class="feedback__form-input" id="form_email" type="email" name="email" placeholder="Email" data-error="Требуется действующее электронное письмо.">
+              <label class="feedback__form-label" for="form_email">Email</label>
             </p>
             <p class="feedback__form-item feedback__phone">
-              <input class="feedback__form-input" id="form-phone" type="tel" name="phone" placeholder="Phone number">
-              <label class="feedback__form-label" for="form-phone">Phone number</label>
+              <input class="feedback__form-input" id="form_tel" type="tel" name="phone" placeholder="Phone number">
+              <label class="feedback__form-label" for="form_tel" required>Phone number</label>
             </p>
             <p class="feedback__form-item feedback__name">
-              <input class="feedback__form-input" id="form-name" type="text" name="name" placeholder="Your name">
-              <label class="feedback__form-label" for="form-name">Your name</label>
+              <input class="feedback__form-input" id="form_name" type="text" name="name" placeholder="Your name">
+              <label class="feedback__form-label" for="form_name">Your name</label>
             </p>
             <p class="feedback__form-item feedback__company">
-              <input class="feedback__form-input" id="form-company" type="text" name="company" placeholder="Company">
-              <label class="feedback__form-label" for="form-company">Company</label>
+              <input class="feedback__form-input" id="form_company" type="text" name="company" placeholder="Company">
+              <label class="feedback__form-label" for="form_company">Company</label>
             </p>
             <p class="feedback__form-item feedback__comment">
-              <input class="feedback__form-input" id="form-comment" type="text" name="comment" placeholder="Comment">
-              <label class="feedback__form-label visually-hidden" for="form-comment">Comment</label>
+              <input class="feedback__form-input" id="form_message" type="text" name="text_comment" placeholder="Comment" data-error="Пожалуйста, оставьте нам сообщение.">
+              <label class="feedback__form-label visually-hidden" for="form_message">Comment</label>
             </p>
             <p class="feedback__form-item feedback__checkbox">
-              <input class="feebback__form-checkbox" type="checkbox" id="personal-data" name="personal-data" checked>
-              <label class="feedback__form-personal" for="personal-data">I agree to the personal data processing 
-персональных данных</label>
+              <input class="feebback__form-checkbox" type="checkbox" id="personal-data" name="personal-data" checked required>
+              <label class="feedback__form-personal" for="personal-data">I agree to the personal data processing персональных данных</label>
             </p>
-            <button class="button feedback__button" type="submit">Send</button>
+            <button class="button feedback__button" type="submit" name="btn_submit" id="button_contacts">Send</button>
           </div>
         </form>
     </section>
@@ -366,12 +363,39 @@
     <div class="footer__content">
       <h2 class="title footer__title">Contacts</h2>
       <a class="link" href="tel:+79060746861">+7 906 074 6861</a><br>
-      <a class="link" href="mailto:Olga.Mashko@enisey-cons.com">Olga.Mashko@enisey-cons.com</a>
+      <a class="link " href="mailto:Olga.Mashko@enisey-cons.com">Olga.Mashko@enisey-cons.com</a>
     </div>
    
   </footer>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="/js/script.js"></script>
+  <script>
+    $(document).ready(function(){
+           $('#button_contacts').click(function(){
+               var form_name   = $('#form_name').val();
+               var form_email   = $('#form_email').val();
+               var form_name   = $('#form_tel').val();
+               var form_company   = $('#form_company').val();
+               var form_message = $('#form_message').val();
+               $.ajax({
+                   url: "post.php", 
+                   type: "post", 
+                   dataType: "json", 
+                   data: { 
+                       "form_name":   form_name,
+                       "form_email":   form_email,
+                       "form_tel":   form_name,
+                       "form_company":   form_company,
+                       "form_message": form_message,
+                       "lang": "en",
+                   },
+                   success: function(data){
+                       $('.messages').html(data.result); 
+                   }
+               });
+           });
+       });
+  </script> 
 </body>
 
 </html>
