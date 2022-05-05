@@ -38,10 +38,6 @@ const swiper = new Swiper('.swiper', {
 });
 
 const swiperReviews = new Swiper('.review__swiper', {
-  navigation: {
-    nextEl: '.arrows__item--next',
-    prevEl: '.arrows__item--prev',
-  },
 
   keyboard: {
     enabled: true,
@@ -60,17 +56,15 @@ const swiperReviews = new Swiper('.review__swiper', {
   slidesPerView: "auto",
 
   watchOverflow: true,
-
-  slidesPerGroup: 2,
-
-  speed: 600,
+  
+  noSwiping: true,
 
   breakpoints: {
     320: {
-      slidesPerGroup: 1,
+     
     },
     1024: {
-      slidesPerGroup: 2,
+      
     }
   },
 
