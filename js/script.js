@@ -26,45 +26,15 @@ const swiper = new Swiper('.swiper', {
 
   speed: 600,
 
+  noSwiping: true,
+
+
   breakpoints: {
     320: {
       slidesPerGroup: 1,
     },
     1024: {
       slidesPerGroup: 2,
-    }
-  },
-
-});
-
-const swiperReviews = new Swiper('.review__swiper', {
-
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-    pageUpDown: true,
-  },
-
-  simulateTouch: true,
-  grabCursor: true,
-
-  // mousewheel: {
-  //   sensitivity: 1,
-  //   eventsTarget: ".swiper-slide"
-  // },
-
-  slidesPerView: "auto",
-
-  watchOverflow: true,
-  
-  noSwiping: true,
-
-  breakpoints: {
-    320: {
-     
-    },
-    1024: {
-      
     }
   },
 
