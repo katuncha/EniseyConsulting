@@ -29,8 +29,8 @@
         // собираем данные из формы
         $message  = "Имя пользователя: " . $_POST['form_name'] . "<br/>";
         $message .= "E-mail пользователя: " . $_POST['form_email'] . "<br/><br/>";
-	    	$message .= "Телефон пользователя: " . $_POST['form_tel'] . "<br/><br/>";
-		    $message .= "Название компании: " . $_POST['form_company'] . "<br/><br/>";
+	    $message .= "Телефон пользователя: " . $_POST['form_tel'] . "<br/><br/>";
+		$message .= "Название компании: " . $_POST['form_company'] . "<br/><br/>";
         $message .= "Текст письма: " . $_POST['form_message'];      
         send_mail($message); // отправим письмо
         // выведем сообщение об успехе
