@@ -367,17 +367,6 @@ button {
   box-sizing: border-box;
 }
 
-/* .swiper-gradient {
-  height: 100%;
-  width: 68px;
-  background-color: red;
-  
-} */
-
-.slider__text {
-  /* width: 245px; */
-}
-
 /* Clients */
 
 .clients {
@@ -1100,6 +1089,31 @@ button {
     .slider:after {
       display: none;
     }
+
+    .reviews__item:nth-child(2) {
+      display: none;
+    }
+    
+    .reviews__item:nth-child(3) {
+      display: none;
+    }
+
+    .reviews__list {
+      display: block;
+    }
+
+    .reviews__item {
+      width: 100%;
+    }
+
+    .slider__slide:first-child {
+      margin-left: 20px;
+    }
+      
+    .slider__slide:last-child {
+      margin-right: 20px;
+    }
+
     
   }
 
