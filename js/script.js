@@ -40,6 +40,7 @@ const swiper = new Swiper('.swiper', {
 
 });
 
+
 //set cookie
 
 const cookies_box = document.getElementById('cookies_box'),
