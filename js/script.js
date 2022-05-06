@@ -26,7 +26,7 @@ const swiper = new Swiper('.swiper', {
 
   speed: 600,
 
-  noSwiping: true,
+  noSwiping: false,
 
 
   breakpoints: {
@@ -47,9 +47,10 @@ const cookies_box = document.getElementById('cookies_box'),
 cookies_button = document.getElementById('cookies_button');
 
 cookies_button.addEventListener('click',function(){
-  document.cookie = "CookieBy=InventionTricks; expires="+ new Date(2023, 0, 1).toUTCString();
-  document.cookie = "Name=John; max-age="+60*60*24*30;
-  document.cookie = "LastName=Deo; max-age="+60*60*24*30;
+  document.cookie = "CookieBy=EniseyConsulting; expires="+ new Date(2023, 0, 1).toUTCString();
+
+  // document.cookie = "Name=John; max-age="+60*60*24*30;
+  // document.cookie = "LastName=Deo; max-age="+60*60*24*30;
 
   if(document.cookie){
     cookies_box.classList.add('hide');

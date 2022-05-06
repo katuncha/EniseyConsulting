@@ -1,6 +1,6 @@
 :root {
   --white: #ffffff; 
-  --black: #000000;
+  --black: rgba(0, 0, 0, 0.8);
   --light-blue: #F7FAFE;
   --dark-blue: #3365DE;
   --hover-btn: #6389E7; 
@@ -62,6 +62,7 @@ p {
 
 input {
   border-width: 0px;
+  border-radius: 0;
   border-color: transparent;
   margin: 0;
   padding: 0;
@@ -1106,10 +1107,10 @@ button {
     }
 
     .reviews__item {
-      width: 80vw;
+      width: calc(100vw - 40px);
     }
 
-    /* .reviews__item:nth-child(2) {
+    .reviews__item:nth-child(2) {
       display: none;
     }
     
@@ -1123,7 +1124,7 @@ button {
 
     .reviews__item {
       width: 100%;
-    } */
+    }
 
     .slider__slide:first-child {
       margin-left: 20px;
