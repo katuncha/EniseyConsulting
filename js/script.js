@@ -28,6 +28,8 @@ const swiper = new Swiper('.swiper', {
 
   noSwiping: false,
 
+  // initialSlide: 1,
+
 
   breakpoints: {
     320: {
