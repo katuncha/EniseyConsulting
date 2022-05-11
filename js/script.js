@@ -12,28 +12,23 @@ const swiper = new Swiper('.swiper', {
 
   simulateTouch: true,
   grabCursor: true,
-
+  spaceBetween: 20,
   // mousewheel: {
   //   sensitivity: 1,
   //   eventsTarget: ".swiper-slide"
   // },
 
-  slidesPerView: "auto",
-
   watchOverflow: true,
-
-  slidesPerGroup: 2,
 
   speed: 600,
 
-  noSwiping: false,
+  // noSwiping: false,
 
+  slidesPerView: 'auto',
+  slidesPerGroup: 1,
 
   breakpoints: {
-    320: {
-      slidesPerGroup: 1,
-    },
-    1024: {
+    768: {
       slidesPerGroup: 2,
     }
   },
