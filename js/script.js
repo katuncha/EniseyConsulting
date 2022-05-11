@@ -13,6 +13,8 @@ const swiper = new Swiper('.swiper', {
   simulateTouch: true,
   grabCursor: true,
   spaceBetween: 20,
+  slidePerView: 'auto',
+  slidesPerGroup: 1,
 
   // mousewheel: {
   //   sensitivity: 1,
@@ -23,20 +25,12 @@ const swiper = new Swiper('.swiper', {
 
   speed: 600,
 
-  // noSwiping: false,
-
-  // initialSlide: 1,
-
 
   breakpoints: {
     768: {
       slidesPerGroup: 2,
-    },
-
-    // 320: {
-    //   slidesPerGroup: 1,
-    // }
-  },
+    }
+  }
 
 });
 
@@ -64,6 +58,6 @@ function getCookieName(name){
 
 var getCookieName = getCookieName('CookieBy');
 
-if(getCookieName == 'InventionTricks') {
+if(getCookieName == 'EniseyConsulting') {
   cookies_box.classList.add('hide');
 }
